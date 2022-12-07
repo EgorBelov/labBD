@@ -1,4 +1,4 @@
-﻿namespace WebApplication6.Models.Entities
+﻿namespace labBD.Models.Entities
 {
     public class User
     {

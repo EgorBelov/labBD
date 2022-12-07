@@ -1,6 +1,6 @@
 ﻿using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace WebApplication6.Models.Entities
+namespace labBD.Models.Entities
 {
     public class MealsComposition
     {

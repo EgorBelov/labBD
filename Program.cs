@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using WebApplication6.Models;
+using labBD.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

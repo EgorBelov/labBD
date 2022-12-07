@@ -1,6 +1,6 @@
-﻿using WebApplication6.Models.Entities;
+﻿using labBD.Models.Entities;
 
-namespace WebApplication6.Models
+namespace labBD.Models
 {
     
     public class ApplicationContextSeed

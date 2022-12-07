@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebApplication6.Models;
-using WebApplication6.Models.Entities;
+using labBD.Models;
+using labBD.Models.Entities;
 
-namespace WebApplication6.Pages
+namespace labBD.Pages
 {
     [IgnoreAntiforgeryToken]
     public class EditModel : PageModel
