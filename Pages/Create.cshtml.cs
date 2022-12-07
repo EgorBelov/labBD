@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApplication6.Models;
+using WebApplication6.Models.Entities;
 
 namespace WebApplication6.Pages
 {
@@ -10,7 +11,6 @@ namespace WebApplication6.Pages
         ApplicationContext context;
         [BindProperty]
         public Product Product { get; set; } = new();
-        //public User Person { get; set; } = new();
         public CreateModel(ApplicationContext db)
         {
             context = db;

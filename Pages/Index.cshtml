@@ -25,21 +25,3 @@
         
     }
 </table>
-@*<table>
-    <tr><th>Имя</th><th>Возраст</th><th></th></tr>
-    @foreach (var user in Model.Users)
-    {
-            <tr>
-                <td>@user.Name</td
-            ><td>@user.Age</td>
-                 <td>
-                    <form method="post">
-                        <a asp-page="Edit" asp-route-id="@user.Id">Изменить</a>
-                        <button type="submit" asp-page-handler="delete" asp-route-id="@user.Id">
-                            Удалить
-                        </button>
-                    </form>
-                </td>
-            </tr>
-    }
-</table>*@

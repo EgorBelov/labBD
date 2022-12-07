@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApplication6.Models;
+using WebApplication6.Models.Entities;
 
 namespace WebApplication6.Pages
 {
@@ -10,7 +11,6 @@ namespace WebApplication6.Pages
         ApplicationContext context;
         [BindProperty]
         public Product? Product { get; set; }
-        //public User? Person { get; set; }
         public EditModel(ApplicationContext db)
         {
             context = db;
@@ -19,15 +19,11 @@ namespace WebApplication6.Pages
         {
             Product = await context.Products.FindAsync(id);
             if (Product == null) return NotFound();
-            
-            //Person = await context.Users.FindAsync(id);
-            //if (Person == null) return NotFound();
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
         {
             context.Products.Update(Product!);
-            //context.Users.Update(Person!);
             await context.SaveChangesAsync();
             return RedirectToPage("Index");
         }
