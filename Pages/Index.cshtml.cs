@@ -9,19 +9,23 @@ namespace WebApplication6.Pages
     {
         ApplicationContext context;
         public List<Product> Products { get; private set; } = new();
+        //public List<User> Users { get; private set; } = new();
         public IndexModel(ApplicationContext db)
         {
             context = db;
         }
         public void OnGet()
         {
+            //Users = context.Users.AsNoTracking().ToList();
             Products = context.Products.AsNoTracking().ToList();
         }
-        public List<Product> GetProducts()
-        {
-            return context.Products.AsNoTracking().ToList();
-        }
-        public async Task<IActionResult> OnPostDeleteAsync(int id)
+        //public List<Product> GetProducts()
+        //{
+        //    return context.Products.AsNoTracking().ToList();
+        //}
+
+
+        public async Task<IActionResult> OnPostDeleteAsync(Guid id)
         {
             var product = await context.Products.FindAsync(id);
 
@@ -33,5 +37,18 @@ namespace WebApplication6.Pages
 
             return RedirectToPage();
         }
+
+        //public async Task<IActionResult> OnPostDeleteAsync(int id)
+        //{
+        //    var user = await context.Users.FindAsync(id);
+
+        //    if (user != null)
+        //    {
+        //        context.Users.Remove(user);
+        //        await context.SaveChangesAsync();
+        //    }
+
+        //    return RedirectToPage();
+        //}
     }
 }

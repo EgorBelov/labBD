@@ -10,22 +10,24 @@ namespace WebApplication6.Pages
         ApplicationContext context;
         [BindProperty]
         public Product? Product { get; set; }
-
+        //public User? Person { get; set; }
         public EditModel(ApplicationContext db)
         {
             context = db;
         }
-        public async Task<IActionResult> OnGetAsync(int id)
+        public async Task<IActionResult> OnGetAsync(Guid id)
         {
             Product = await context.Products.FindAsync(id);
-
             if (Product == null) return NotFound();
-
+            
+            //Person = await context.Users.FindAsync(id);
+            //if (Person == null) return NotFound();
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
         {
             context.Products.Update(Product!);
+            //context.Users.Update(Person!);
             await context.SaveChangesAsync();
             return RedirectToPage("Index");
         }

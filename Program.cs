@@ -13,10 +13,10 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 });
 
 builder.Services.AddRazorPages();
-
 var app = builder.Build();
 
 app.MapRazorPages();
+
 using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
