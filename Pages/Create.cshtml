@@ -1,0 +1,22 @@
+﻿@page
+@model WebApplication6.Pages.CreateModel
+
+<h2>Добавление нового пользователя</h2>
+<form method="post">
+    <p><label>Название: </label><br />
+        <input name="name" />
+    </p>
+    <p>
+        <label>Продуктовая группа: </label><br />
+        <input name="productGroup"/>
+    </p>
+    <p>
+        <label>Вид: </label><br />
+        <input name="type"/>
+    </p>
+    <p>
+        <label>Калорийность: </label><br />
+        <input name="caloricValue" type="number"/>
+    </p>
+    <input type="submit" value="Отправить" />
+</form>
