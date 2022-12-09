@@ -3548,11 +3548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\HSE_HERNYA\\УЧУ-C#\\WebApplication6\\labBD.csproj",
+      "projectUniqueName": "E:\\HSE_HERNYA\\БД\\labBD\\labBD.csproj",
       "projectName": "labBD",
-      "projectPath": "E:\\HSE_HERNYA\\УЧУ-C#\\WebApplication6\\labBD.csproj",
+      "projectPath": "E:\\HSE_HERNYA\\БД\\labBD\\labBD.csproj",
       "packagesPath": "C:\\Users\\79223\\.nuget\\packages\\",
-      "outputPath": "E:\\HSE_HERNYA\\УЧУ-C#\\WebApplication6\\obj\\",
+      "outputPath": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

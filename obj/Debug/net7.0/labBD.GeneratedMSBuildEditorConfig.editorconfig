@@ -9,21 +9,21 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = labBD
 build_property.RootNamespace = labBD
-build_property.ProjectDir = E:\HSE_HERNYA\УЧУ-C#\WebApplication6\
+build_property.ProjectDir = E:\HSE_HERNYA\БД\labBD\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\HSE_HERNYA\УЧУ-C#\WebApplication6
+build_property.MSBuildProjectDirectory = E:\HSE_HERNYA\БД\labBD
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/HSE_HERNYA/УЧУ-C\#/WebApplication6/Pages/Create.cshtml]
+[E:/HSE_HERNYA/БД/labBD/Pages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HSE_HERNYA/УЧУ-C\#/WebApplication6/Pages/Edit.cshtml]
+[E:/HSE_HERNYA/БД/labBD/Pages/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/HSE_HERNYA/УЧУ-C\#/WebApplication6/Pages/Index.cshtml]
+[E:/HSE_HERNYA/БД/labBD/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
