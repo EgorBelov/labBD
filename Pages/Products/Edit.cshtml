@@ -1,0 +1,25 @@
+﻿@page "{id:Guid}"
+@model labBD.Pages.Products.EditModel
+ 
+<h2>Редактирование продукта</h2>
+  
+<form method="post">
+    <input name="id" value="@Model.Product?.Id" type="hidden" />
+    <p>
+        <label>Название</label><br />
+        <input name="name" value="@Model.Product?.Name" />
+    </p>
+    <p>
+        <label>Продуктовая группа</label><br />
+        <input name="productGroup" value="@Model.Product?.ProductGroup"/>
+    </p>
+    <p>
+        <label>Вид</label><br />
+        <input name="type" value="@Model.Product?.Type"/>
+    </p>
+    <p>
+        <label>Калорийность</label><br />
+        <input name="caloricValue" value="@Model.Product?.CaloricValue" type="number"/>
+    </p>
+    <input type="submit" value="Сохранить" />
+</form>

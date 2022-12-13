@@ -68,3 +68,5 @@ E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\refint\labBD.dll
 E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\labBD.pdb
 E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\labBD.genruntimeconfig.cache
 E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\ref\labBD.dll
+E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+E:\HSE_HERNYA\БД\labBD\obj\Debug\net7.0\scopedcss\projectbundle\labBD.bundle.scp.css

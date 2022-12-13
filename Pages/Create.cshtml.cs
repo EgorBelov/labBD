@@ -1,7 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using labBD.Models;
+using labBD.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using labBD .Models;
-using labBD.Models.Entities;
 
 namespace labBD.Pages
 {
@@ -10,18 +14,23 @@ namespace labBD.Pages
     {
         ApplicationContext context;
         [BindProperty]
-        public Product Product { get; set; } = new();
+        public User User { get; set; } = new();
         public CreateModel(ApplicationContext db)
         {
             context = db;
         }
+        public void OnGet()
+        {
+
+        }
+
         public async Task<IActionResult> OnPostAsync()
         {
-            context.Products.Add(Product);
-            //context.Users.Add(Person);
+            context.Users.Add(User);
+            //context.FoodIntakes.Add(Person);
             await context.SaveChangesAsync();
             return RedirectToPage("Index");
         }
-        
+
     }
 }

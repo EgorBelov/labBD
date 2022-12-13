@@ -1,0 +1,26 @@
+﻿@page
+@model labBD.Pages.Meals.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Список блюд</h2>
+<p><a asp-page="Create">Добавить блюдо</a></p>
+<table>
+    <tr><th>Название</th><th>Категория</th><th>Калорийность</th></tr>
+    @foreach (var meal in Model.Meals)
+    {
+        <tr>
+            <td>@meal.Name</td>
+            <td>@meal.Category</td>
+            <td>@meal.CaloricValue</td>
+            <td>
+                <form method="post">
+                    <a asp-page="Edit" asp-route-id="@meal.Id">Изменить</a>
+                    <button type="submit" asp-page-handler="delete" asp-route-id="@meal.Id">
+                        Удалить
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    }
+</table>

@@ -1,0 +1,21 @@
+﻿@page
+@model labBD.Pages.Meals.CreateModel
+
+
+<h2>Добавление нового блюда</h2>
+<form method="post">
+    <p>
+        <label>Название: </label><br />
+        <input name="name" />
+    </p>
+    <p>
+        <label>Категория: </label><br />
+        <input name="category" />
+    </p>
+    <p>
+        <label>Калорийность: </label><br />
+        <input name="caloricValue" type="number" />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>
+

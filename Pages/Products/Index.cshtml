@@ -1,0 +1,107 @@
+﻿@page 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model labBD.Pages.Products.IndexModel
+<style>
+    table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    }
+    th {
+    background: #BCEBDD;
+    color: white;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    }
+    th:first-child, td:first-child {
+    text-align: left;
+    }
+    th:first-child {
+    border-top-left-radius: 10px;
+    }
+    th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+    }
+    td {
+    padding: 10px 20px;
+    background: #F8E391;
+    }
+    tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+    }
+    tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+    }
+    tr td:last-child {
+    border-right: none;
+    }
+    .gradient-button {
+      text-decoration: none;
+      display: inline-block;
+      color: white;
+      padding: 20px 30px;
+      margin: 10px 20px;
+      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+      background-size: 200% auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+      transition: .5s;
+    }
+    .gradient-button:hover {
+      background-position: right center;
+    }
+
+    a {
+      background-color: red;
+      box-shadow: 0 5px 0 darkred;
+      color: white;
+      padding: 1em 1.5em;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      background-color: #ce0606;
+      cursor: pointer;
+    }
+
+    a:active {
+      box-shadow: none;
+      top: 5px;
+    }
+</style>
+<h2>Список продуктов</h2>
+<p><a  asp-page="Create">Добавить продукт</a></p>
+<table>
+    <tr><th>Название</th><th>Продуктовая группа</th><th>Вид</th><th>Калорийность</th><th>Действия</th></tr>
+    @foreach (var product in Model.Products)
+    {
+            <tr>
+                <td class="td1">@product.Name</td>
+                <td>@product.ProductGroup</td>
+                <td>@product.Type</td>
+                <td>@product.CaloricValue</td>
+                <td>
+                    <form method="post">
+                            <a asp-page="Edit" asp-route-id="@product.Id">Изменить</a>
+                    <button type="submit" asp-page-handler="delete" asp-route-id="@product.Id" class="gradient-button">
+                            Удалить
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        
+    }
+</table>

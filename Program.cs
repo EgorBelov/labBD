@@ -2,18 +2,23 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using labBD.Models;
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddRazorPages();
 
-
-// добавляем контекст ApplicationContext в качестве сервиса в приложение
 builder.Services.AddDbContext<ApplicationContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
 });
 
-builder.Services.AddRazorPages();
 var app = builder.Build();
+
+
+app.UseStaticFiles();
+
+app.UseRouting();
 
 app.MapRazorPages();
 

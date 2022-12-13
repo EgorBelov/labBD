@@ -1,25 +1,38 @@
-﻿@page "{id:Guid}"
+﻿@page
 @model labBD.Pages.EditModel
- 
-<h2>Редактирование пользователя</h2>
-  
+@{
+}
+<h2>Редактирование пользоавтеля</h2>
+
 <form method="post">
-    <input name="id" value="@Model.Product?.Id" type="hidden" />
+    <input name="id" value="@Model.User?.Id" type="hidden" />
     <p>
-        <label>Название</label><br />
-        <input name="name" value="@Model.Product?.Name" />
+        <label>Имя</label><br />
+        <input name="name" value="@Model.User?.Name" />
     </p>
     <p>
-        <label>Продуктовая группа</label><br />
-        <input name="productGroup" value="@Model.Product?.ProductGroup"/>
+        <label>Почта</label><br />
+        <input name="email" value="@Model.User?.Email" />
     </p>
     <p>
-        <label>Вид</label><br />
-        <input name="type" value="@Model.Product?.Type"/>
+        <label>Рост</label><br />
+        <input name="height" value="@Model.User?.Height" type="number" />
     </p>
     <p>
-        <label>Калорийность</label><br />
-        <input name="caloricValue" value="@Model.Product?.CaloricValue" type="number"/>
+        <label>Вес</label><br />
+        <input name="weight" value="@Model.User?.Weight" type="number" />
+    </p>
+    <p>
+        <label>Возраст</label><br />
+        <input name="age" value="@Model.User?.Age" type="number" />
+    </p>
+    <p>
+        <label>Пол</label><br />
+        <input name="sex" value="@Model.User?.Sex"/>
+    </p>
+    <p>
+        <label>Физическая активность</label><br />
+        <input name="physicalActivity" value="@Model.User?.PhysicalActivity" type="number" />
     </p>
     <input type="submit" value="Сохранить" />
 </form>

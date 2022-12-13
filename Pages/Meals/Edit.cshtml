@@ -1,0 +1,20 @@
+﻿@page
+@model labBD.Pages.Meals.EditModel
+<h2>Редактирование блюда</h2>
+
+<form method="post">
+    <input name="id" value="@Model.Meal?.Id" type="hidden" />
+    <p>
+        <label>Название</label><br />
+        <input name="name" value="@Model.Meal?.Name" />
+    </p>
+    <p>
+        <label>Категория</label><br />
+        <input name="category" value="@Model.Meal?.Category" />
+    </p>
+    <p>
+        <label>Калорийность</label><br />
+        <input name="caloricValue" value="@Model.Meal?.CaloricValue" type="number" />
+    </p>
+    <input type="submit" value="Сохранить" />
+</form>

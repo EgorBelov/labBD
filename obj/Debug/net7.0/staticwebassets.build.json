@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k6b9fkweSfW5aWX0tquWmizv6dWYa/Tm7/7K6w3XZLU=",
+  "Hash": "uQGWentlLDvCBjQTMy2/MHFGrd5XG8NX7ebV2OdBppA=",
   "Source": "labBD",
   "BasePath": "_content/labBD",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\bundle\\labBD.styles.css",
+      "SourceId": "labBD",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/labBD",
+      "RelativePath": "labBD.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\bundle\\labBD.styles.css"
+    },
+    {
+      "Identity": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\labBD.bundle.scp.css",
+      "SourceId": "labBD",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/labBD",
+      "RelativePath": "labBD.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\labBD.bundle.scp.css"
+    },
     {
       "Identity": "E:\\HSE_HERNYA\\БД\\labBD\\wwwroot\\css\\site.css",
       "SourceId": "labBD",

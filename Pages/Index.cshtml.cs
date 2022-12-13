@@ -1,31 +1,35 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using labBD.Models;
 using labBD.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace labBD.Pages
 {
-    public class IndexModel : PageModel
-    {
+	public class IndexModel : PageModel
+    { 
         ApplicationContext context;
-        public List<Product> Products { get; private set; } = new();
+        public List<User> Users { get; private set; } = new();
         public IndexModel(ApplicationContext db)
         {
             context = db;
         }
         public void OnGet()
         {
-            Products = context.Products.AsNoTracking().ToList();
+            Users= context.Users.AsNoTracking().ToList();
         }
-      
+
         public async Task<IActionResult> OnPostDeleteAsync(Guid id)
         {
-            var product = await context.Products.FindAsync(id);
+            var user = await context.Users.FindAsync(id);
 
-            if (product != null)
+            if (user != null)
             {
-                context.Products.Remove(product);
+                context.Users.Remove(user);
                 await context.SaveChangesAsync();
             }
 

@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "E:\\HSE_HERNYA\\БД\\labBD\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\labBD.bundle.scp.css",
+      "PackagePath": "staticwebassets\\labBD.bundle.scp.css"
+    },
+    {
       "Id": "E:\\HSE_HERNYA\\БД\\labBD\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

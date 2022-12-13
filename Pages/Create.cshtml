@@ -3,20 +3,33 @@
 
 <h2>Добавление нового пользователя</h2>
 <form method="post">
-    <p><label>Название: </label><br />
+    <p>
+        <label>Имя: </label><br />
         <input name="name" />
     </p>
     <p>
-        <label>Продуктовая группа: </label><br />
-        <input name="productGroup"/>
+        <label>Почта: </label><br />
+        <input name="email" />
     </p>
     <p>
-        <label>Вид: </label><br />
-        <input name="type"/>
+        <label>Рост: </label><br />
+        <input name="height" type="number" />
     </p>
     <p>
-        <label>Калорийность: </label><br />
-        <input name="caloricValue" type="number"/>
+        <label>Вес: </label><br />
+        <input name="weight" type="number" />
+    </p>
+    <p>
+        <label>Возраст: </label><br />
+        <input name="Age" type="number" />
+    </p>
+    <p>
+        <label>Пол: </label><br />
+        <input name="sex"/>
+    </p>
+    <p>
+        <label>Физическая активность: </label><br />
+        <input name="physicalActivity" type="number" />
     </p>
     <input type="submit" value="Отправить" />
 </form>

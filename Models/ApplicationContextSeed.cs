@@ -5,8 +5,8 @@ namespace labBD.Models
     
     public class ApplicationContextSeed
     {
-        public static async Task InitializeDb(ApplicationContext db)
-        {
+        
+        public static async Task InitializeDb(ApplicationContext db)        {
             if (db.Products.Any())
                 return;
 
@@ -15,6 +15,7 @@ namespace labBD.Models
                 var item = new Product(i);
                 await db.Products.AddAsync(item);
             }
+          
             await db.SaveChangesAsync();
         }
     }
