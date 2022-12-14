@@ -1,25 +1,25 @@
-﻿@page "{id:Guid}"
+﻿@page 
 @model labBD.Pages.Products.EditModel
 <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Редактирование продукта</h2>
   
 <form method="post">
-    <input asp-for="Product.Id" type="hidden" />
+    <input name="id" value="@Model.Product?.Id" type="hidden" />
     <p>
-        <label asp-for="Product.Name">Название</label><br />
-        <input asp-for="Product.Name" />
+        <label>Название</label><br />
+        <input name="name" value="@Model.Product?.Name" />
     </p>
     <p>
-        <label asp-for="Product.ProductGroup">Продуктовая группа</label><br />
-        <input asp-for="Product.ProductGroup"/>
+        <label>Продуктовая группа</label><br />
+        <input name="productGroup" value="@Model.Product?.ProductGroup"/>
     </p>
     <p>
-        <label asp-for="Product.Type">Вид</label><br />
-        <input asp-for="Product.Type" />
+        <label>Вид</label><br />
+        <input name="type" value="@Model.Product?.Type"/>
     </p>
     <p>
-        <label asp-for="Product.CaloricValue">Калорийность</label><br />
-        <input asp-for="Product.CaloricValue" type="number" />
+        <label>Калорийность</label><br />
+        <input name="caloricValue" value="@Model.Product?.CaloricValue" type="number"/>
     </p>
     <input type="submit" value="Сохранить" class="gradient-button" />
 </form>

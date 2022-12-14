@@ -6,20 +6,25 @@
 <form method="post">
     <input asp-for="FoodIntake.Id" type="hidden" />
     <p>
-        <label asp-for="FoodIntake.Id">Вид приема пищи</label><br />
-        <input asp-for="FoodIntake.Id" value="@Model.FoodIntake?.TypeOfFoodIntake" />
+        <label asp-for="FoodIntake.TypeOfFoodIntake">Вид приема пищи</label><br />
+        <input asp-for="FoodIntake.TypeOfFoodIntake" />
     </p>
-    <p>
-        <label asp-for="FoodIntake.Meal.Name">Блюдо</label><br />
-        <input asp-for="FoodIntake.Meal.Name"  />
-    </p>
+    <label asp-for="FoodIntake.Meal" class="control-label">Блюдо</label>
+    <select asp-for="FoodIntake.MealId" class="form-control"
+            asp-items="@Model.MealSL">
+        <option value="">Выбор блюда</option>
+    </select>
+    <span asp-validation-for="FoodIntake.MealId" class="text-danger" />
     <p>
         <label asp-for="FoodIntake.Date">Дата приема пищи</label><br />
-        <input asp-for="FoodIntake.Date"  type="date" />
+        <input asp-for="FoodIntake.Date" date" />
     </p>
-    <p>
-        <label asp-for="FoodIntake.User.Name">Пользователь</label><br />
-        <input asp-for="FoodIntake.User.Name"  />
-    </p>
+    <label asp-for="FoodIntake.User" class="control-label">Пользователь</label>
+    <select asp-for="FoodIntake.UserId" class="form-control"
+            asp-items="@Model.UserSL">
+        <option value="">Выбор пользователя</option>
+    </select>
+    <span asp-validation-for="FoodIntake.UserId" class="text-danger" />
+    
     <input type="submit" value="Сохранить" class="gradient-button" />
 </form>

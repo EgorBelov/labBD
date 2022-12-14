@@ -19,7 +19,7 @@ namespace labBD.Pages.Meals
         {
             context = db;
         }
-        public async Task<IActionResult> OnGetAsync(Guid id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
             Meal = await context.Meals.FindAsync(id);
             if (Meal == null) return NotFound();

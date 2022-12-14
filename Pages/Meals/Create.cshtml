@@ -4,7 +4,7 @@
 
 <h2>Добавление нового блюда</h2>
 <form method="post">
-    @*<p>
+    <p>
         <label>Название: </label><br />
         <input name="name" />
     </p>
@@ -15,18 +15,6 @@
     <p>
         <label>Калорийность: </label><br />
         <input name="caloricValue" type="number" />
-    </p>*@
-     <p>
-        <label asp-for="Meal.Name">Название</label><br />
-         <input asp-for="Meal.Name"  />
-    </p>
-    <p>
-        <label asp-for="Meal.Category">Категория</label><br />
-        <input asp-for="Meal.Category" />
-    </p>
-    <p>
-        <label asp-for="Meal.CaloricValue">Калорийность</label><br />
-        <input asp-for="Meal.CaloricValue"  type="number" />
     </p>
     <input type="submit" value="Отправить" class="gradient-button"/>
 </form>

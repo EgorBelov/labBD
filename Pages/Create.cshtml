@@ -2,7 +2,7 @@
 @model labBD.Pages.CreateModel
 <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Добавление нового пользователя</h2>
-@*<form method="post">
+<form method="post">
     <p>
         <label>Имя: </label><br />
         <input name="name" />
@@ -30,37 +30,6 @@
     <p>
         <label>Физическая активность: </label><br />
         <input name="physicalActivity" type="number" />
-    </p>
-    <input type="submit" value="Отправить" class="gradient-button" />
-</form>*@
-<form method="post">
-    <p>
-        <label asp-for="User.Name">Имя</label><br />
-        <input asp-for="User.Name" />
-    </p>
-    <p>
-        <label asp-for="User.Email">Почта</label><br />
-        <input asp-for="User.Email" />
-    </p>
-    <p>
-        <label asp-for="User.Height">Рост</label><br />
-        <input asp-for="User.Height" type="number" />
-    </p>
-    <p>
-        <label asp-for="User.Weight">Вес</label><br />
-        <input asp-for="User.Weight" type="number" />
-    </p>
-    <p>
-        <label asp-for="User.Age">Возраст</label><br />
-        <input asp-for="User.Age" type="number" />
-    </p>
-    <p>
-        <label asp-for="User.Sex">Пол</label><br />
-        <input asp-for="User.Sex" />
-    </p>
-    <p>
-        <label asp-for="User.PhysicalActivity">Физическая активность</label><br />
-        <input asp-for="User.PhysicalActivity" type="number" />
     </p>
     <input type="submit" value="Отправить" class="gradient-button" />
 </form>

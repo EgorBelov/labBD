@@ -5,17 +5,22 @@
 
 <form method="post">
     <input asp-for="MealsComposition.Id" type="hidden" />
+    <label asp-for="MealsComposition.Meal" class="control-label">Блюдо</label>
+    <select asp-for="MealsComposition.MealId" class="form-control"
+            asp-items="@Model.MealSL">
+        <option value="">Выбор блюда</option>
+    </select>
+
+    <label asp-for="MealsComposition.Product" class="control-label">Продукт</label>
+    <select asp-for="MealsComposition.ProductId" class="form-control"
+            asp-items="@Model.ProductSL">
+        <option value="">Выбор продукта</option>
+    </select>
+    <span asp-validation-for="MealsComposition.ProductId" class="text-danger" />
+
     <p>
-        <label asp-for="MealsComposition.Meal.Name">Блюдо</label><br />
-        <input asp-for="MealsComposition.Meal.Name" />
-    </p>
-    <p>
-        <label asp-for="MealsComposition.Product.Name">Продукт</label><br />
-        <input asp-for="MealsComposition.Product.Name" />
-    </p>
-    <p>
-        <label asp-for="MealsComposition.ProductWeight">Масса продукта</label><br />
+        <label asp-for="MealsComposition.ProductWeight">Масса продукта: </label><br />
         <input asp-for="MealsComposition.ProductWeight" type="number" />
     </p>
-    <input type="submit" value="Сохранить" class="gradient-button" />
+    <input type="submit" value="Отправить" class="gradient-button" />
 </form>

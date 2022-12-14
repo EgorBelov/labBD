@@ -19,7 +19,7 @@ namespace labBD.Pages
         {
             context = db;
         }
-        public async Task<IActionResult> OnGetAsync(Guid id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
             User = await context.Users.FindAsync(id);
             if (User == null) return NotFound();

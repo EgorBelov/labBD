@@ -15,7 +15,7 @@ namespace labBD.Pages.Products
         {
             context = db;
         }
-        public async Task<IActionResult> OnGetAsync(Guid id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
             Product = await context.Products.FindAsync(id);
             if (Product == null) return NotFound();

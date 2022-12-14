@@ -16,10 +16,13 @@ namespace labBD.Pages.FoodIntakes
         }
         public void OnGet()
         {
-            FoodIntakes = context.FoodIntakes.AsNoTracking().ToList();
+            FoodIntakes = context.FoodIntakes
+                .Include(x => x.Meal)
+                .Include(x => x.User)
+                .AsNoTracking().ToList();
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(Guid id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
             var foodIntake = await context.FoodIntakes.FindAsync(id);
 

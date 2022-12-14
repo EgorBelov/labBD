@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Добавление нового продукта</h2>
 <form method="post">
-  @*  <p><label>Название: </label><br />
+    <p><label>Название: </label><br />
         <input name="name" />
     </p>
     <p>
@@ -17,22 +17,6 @@
     <p>
         <label>Калорийность: </label><br />
         <input name="caloricValue" type="number"/>
-    </p>*@
-    <p>
-        <label asp-for="Product.Name">Название</label><br  />
-        <input asp-for="Product.Name" />
-    </p>
-    <p>
-        <label asp-for="Product.ProductGroup">Продуктовая группа</label><br />
-        <input asp-for="Product.ProductGroup"/>
-    </p>
-    <p>
-        <label asp-for="Product.Type">Вид</label><br />
-        <input asp-for="Product.Type" />
-    </p>
-    <p>
-        <label asp-for="Product.CaloricValue">Калорийность</label><br />
-        <input asp-for="Product.CaloricValue" type="number" />
     </p>
     <input type="submit" value="Отправить" class="gradient-button"/>
 </form>

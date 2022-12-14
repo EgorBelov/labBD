@@ -19,9 +19,12 @@ namespace labBD.Pages.Products
             Products = context.Products.AsNoTracking().ToList();
         }
       
-        public async Task<IActionResult> OnPostDeleteAsync(Guid id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
-            var product = await context.Products.FindAsync(id);
+            var product = await context.Products
+                .Include(x => x.MealsCompositions)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
 
             if (product != null)
             {

@@ -2,6 +2,8 @@ using labBD.Models.Entities;
 using labBD.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace labBD.Pages.FoodIntakes
 {
@@ -15,11 +17,31 @@ namespace labBD.Pages.FoodIntakes
         {
             context = db;
         }
-        public void OnGet()
-        {
+       
+        public SelectList MealSL { get; set; }
 
+        public void MealDropDownList(object value = null)
+        {
+            var query = context.Meals.OrderBy(x => x.Name);
+
+            MealSL = new SelectList(query.AsNoTracking(),
+                        "Id", "Name", value);
         }
 
+        public SelectList UserSL { get; set; }
+
+        public void UserDropDownList(object value = null)
+        {
+            var query = context.Users.OrderBy(x => x.Name);
+
+            UserSL = new SelectList(query.AsNoTracking(),
+                        "Id", "Name", value);
+        }
+        public void OnGet()
+        {
+            MealDropDownList();
+            UserDropDownList();
+        }
         public async Task<IActionResult> OnPostAsync()
         {
             context.FoodIntakes.Add(FoodIntake);

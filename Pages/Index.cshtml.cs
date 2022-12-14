@@ -23,9 +23,11 @@ namespace labBD.Pages
             Users= context.Users.AsNoTracking().ToList();
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(Guid id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
-            var user = await context.Users.FindAsync(id);
+            var user = await context.Users
+                .Include(x => x.FoodIntakes)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
             if (user != null)
             {

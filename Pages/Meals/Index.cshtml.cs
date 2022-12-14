@@ -20,12 +20,18 @@ namespace labBD.Pages.Meals
         }
         public void OnGet()
         {
-            Meals = context.Meals.AsNoTracking().ToList();
+            Meals = context.Meals
+                .Include(x => x.MealsCompositions)
+                .AsNoTracking()
+                .ToList();
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(Guid id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
-            var meal = await context.Meals.FindAsync(id);
+            var meal = await context.Meals
+                .Include(x => x.MealsCompositions)
+                .Include(x => x.FoodIntakes)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
             if (meal != null)
             {
