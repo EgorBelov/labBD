@@ -4,18 +4,18 @@
 <h2>Редактирование блюда</h2>
 
 <form method="post">
-    <input name="id" value="@Model.Meal?.Id" type="hidden" />
+    <input asp-for="Meal.Id" type="hidden" />
     <p>
-        <label>Название</label><br />
-        <input name="name" value="@Model.Meal?.Name" />
+        <label asp-for="Meal.Name">Название</label><br />
+        <input asp-for="Meal.Name"  />
     </p>
     <p>
-        <label>Категория</label><br />
-        <input name="category" value="@Model.Meal?.Category" />
+        <label asp-for="Meal.Category">Категория</label><br />
+        <input asp-for="Meal.Category" />
     </p>
     <p>
-        <label>Калорийность</label><br />
-        <input name="caloricValue" value="@Model.Meal?.CaloricValue" type="number" />
+        <label asp-for="Meal.CaloricValue">Калорийность</label><br />
+        <input asp-for="Meal.CaloricValue"  type="number" />
     </p>
     <input type="submit" value="Сохранить" class="gradient-button"/>
 </form>

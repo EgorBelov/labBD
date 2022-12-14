@@ -4,22 +4,22 @@
 <h2>Редактирование продукта</h2>
   
 <form method="post">
-    <input name="id" value="@Model.Product?.Id" type="hidden" />
+    <input asp-for="Product.Id" type="hidden" />
     <p>
-        <label>Название</label><br />
-        <input name="name" value="@Model.Product?.Name" />
+        <label asp-for="Product.Name">Название</label><br />
+        <input asp-for="Product.Name" />
     </p>
     <p>
-        <label>Продуктовая группа</label><br />
-        <input name="productGroup" value="@Model.Product?.ProductGroup"/>
+        <label asp-for="Product.ProductGroup">Продуктовая группа</label><br />
+        <input asp-for="Product.ProductGroup"/>
     </p>
     <p>
-        <label>Вид</label><br />
-        <input name="type" value="@Model.Product?.Type"/>
+        <label asp-for="Product.Type">Вид</label><br />
+        <input asp-for="Product.Type" />
     </p>
     <p>
-        <label>Калорийность</label><br />
-        <input name="caloricValue" value="@Model.Product?.CaloricValue" type="number"/>
+        <label asp-for="Product.CaloricValue">Калорийность</label><br />
+        <input asp-for="Product.CaloricValue" type="number" />
     </p>
     <input type="submit" value="Сохранить" class="gradient-button" />
 </form>

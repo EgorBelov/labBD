@@ -4,7 +4,7 @@
 
 <h2>Добавление нового пользователя</h2>
 <form method="post">
-    <p>
+ @*   <p>
         <label>Блюдо: </label><br />
         <input name="meal" />
     </p>
@@ -15,6 +15,18 @@
     <p>
         <label>Масса продукта: </label><br />
         <input name="productWeight" type="number" />
+    </p>*@
+    <p>
+        <label asp-for="MealsComposition.Meal.Name">Блюдо</label><br />
+        <input asp-for="MealsComposition.Meal.Name" />
+    </p>
+    <p>
+        <label asp-for="MealsComposition.Product.Name">Продукт</label><br />
+        <input asp-for="MealsComposition.Product.Name" />
+    </p>
+    <p>
+        <label asp-for="MealsComposition.ProductWeight">Масса продукта</label><br />
+        <input asp-for="MealsComposition.ProductWeight" type="number" />
     </p>
     <input type="submit" value="Отправить" class="gradient-button" />
 </form>

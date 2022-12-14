@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Добавление новый прием пищи</h2>
 <form method="post">
-    <input name="id" value="@Model.FoodIntake?.Id" type="hidden" />
-    <p>
+   
+   @* <p>
         <label>Вид приема пищи</label><br />
         <input name="typeOfFoodIntake" value="@Model.FoodIntake?.TypeOfFoodIntake" />
     </p>
@@ -19,6 +19,22 @@
     <p>
         <label>Пользователь</label><br />
         <input name="userName" value="@Model.FoodIntake?.User?.Name" />
+    </p>*@
+     <p>
+        <label asp-for="FoodIntake.Id">Вид приема пищи</label><br  />
+        <input asp-for="FoodIntake.Id" value="@Model.FoodIntake?.TypeOfFoodIntake" />
+    </p>
+    <p>
+        <label asp-for="FoodIntake.Meal.Name">Блюдо</label><br />
+        <input asp-for="FoodIntake.Meal.Name"  />
+    </p>
+    <p>
+        <label asp-for="FoodIntake.Date">Дата приема пищи</label><br />
+        <input asp-for="FoodIntake.Date"  type="date" />
+    </p>
+    <p>
+        <label asp-for="FoodIntake.User.Name">Пользователь</label><br />
+        <input asp-for="FoodIntake.User.Name"  />
     </p>
     <input type="submit" value="Отправить" class="gradient-button"/>
 </form>

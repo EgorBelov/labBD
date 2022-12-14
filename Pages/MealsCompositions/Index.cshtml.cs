@@ -9,14 +9,14 @@ namespace labBD.Pages.MealsCompositions
     public class IndexModel : PageModel
     {
         ApplicationContext context;
-        public List<MealsComposition> MealsComposotions { get; private set; } = new();
+        public List<MealsComposition> MealsCompositions { get; private set; } = new();
         public IndexModel(ApplicationContext db)
         {
             context = db;
         }
         public void OnGet()
         {
-            MealsComposotions = context.MealsCompositions.AsNoTracking().ToList();
+            MealsCompositions = context.MealsCompositions.AsNoTracking().ToList();
         }
 
         public async Task<IActionResult> OnPostDeleteAsync(Guid id)
