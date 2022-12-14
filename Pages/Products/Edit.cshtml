@@ -1,6 +1,6 @@
 ﻿@page "{id:Guid}"
 @model labBD.Pages.Products.EditModel
- 
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Редактирование продукта</h2>
   
 <form method="post">
@@ -21,5 +21,5 @@
         <label>Калорийность</label><br />
         <input name="caloricValue" value="@Model.Product?.CaloricValue" type="number"/>
     </p>
-    <input type="submit" value="Сохранить" />
+    <input type="submit" value="Сохранить" class="gradient-button" />
 </form>

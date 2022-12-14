@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uQGWentlLDvCBjQTMy2/MHFGrd5XG8NX7ebV2OdBppA=",
+  "Hash": "lR7l7Vf26oGfaNi5kVtHHQQZuiHxjTK31nrsYT50zjM=",
   "Source": "labBD",
   "BasePath": "_content/labBD",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "E:\\HSE_HERNYA\\БД\\labBD\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "labBD",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\HSE_HERNYA\\БД\\labBD\\wwwroot\\",
+      "BasePath": "_content/labBD",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "E:\\HSE_HERNYA\\БД\\labBD\\wwwroot\\favicon.ico",

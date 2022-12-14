@@ -1,9 +1,9 @@
 ﻿@page
 @model labBD.Pages.Meals.IndexModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Список блюд</h2>
-<p><a asp-page="Create">Добавить блюдо</a></p>
+<p><a asp-page="Create"class="s13">Добавить блюдо</a></p>
 <table>
     <tr><th>Название</th><th>Категория</th><th>Калорийность</th></tr>
     @foreach (var meal in Model.Meals)
@@ -14,8 +14,8 @@
             <td>@meal.CaloricValue</td>
             <td>
                 <form method="post">
-                    <a asp-page="Edit" asp-route-id="@meal.Id">Изменить</a>
-                    <button type="submit" asp-page-handler="delete" asp-route-id="@meal.Id">
+                    <a asp-page="Edit" asp-route-id="@meal.Id" class="s11">Изменить</a>
+                    <button type="submit" asp-page-handler="delete" asp-route-id="@meal.Id" class="gradient-button">
                         Удалить
                     </button>
                 </form>

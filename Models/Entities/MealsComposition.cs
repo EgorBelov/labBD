@@ -5,9 +5,8 @@ namespace labBD.Models.Entities
     public class MealsComposition
     {
         public Guid Id { get; set; }
-        public string? Name { get; set; }
-        public string? Category { get; set; }
-        public int? CaloricValue { get; set; }
+        public int? ProductWeight { get; set; }
+       
         public Guid? ProductId { get; set; }      // внешний ключ
         public Product? Product { get; set; }    // навигационное свойство
 

@@ -40,6 +40,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/HSE_HERNYA/БД/labBD/Pages/MealsCompositions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbHNDb21wb3NpdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HSE_HERNYA/БД/labBD/Pages/MealsCompositions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbHNDb21wb3NpdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/HSE_HERNYA/БД/labBD/Pages/MealsCompositions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbHNDb21wb3NpdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/HSE_HERNYA/БД/labBD/Pages/Meals/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVhbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

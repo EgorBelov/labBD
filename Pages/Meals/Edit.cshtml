@@ -1,5 +1,6 @@
 ﻿@page
 @model labBD.Pages.Meals.EditModel
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Редактирование блюда</h2>
 
 <form method="post">
@@ -16,5 +17,5 @@
         <label>Калорийность</label><br />
         <input name="caloricValue" value="@Model.Meal?.CaloricValue" type="number" />
     </p>
-    <input type="submit" value="Сохранить" />
+    <input type="submit" value="Сохранить" class="gradient-button"/>
 </form>

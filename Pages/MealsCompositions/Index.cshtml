@@ -1,0 +1,31 @@
+﻿@page
+@model labBD.Pages.MealsCompositions.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
+<h2>Список составов блюд</h2>
+<p><a asp-page="Create" class="s13">Добавить состав блюда</a></p>
+<table>
+    <tr>
+        <th>Блюдо</th>
+        <th>Продукт</th>
+        <th>масса продукта</th>
+    </tr>
+    @foreach (var mealscomposition in Model.MealsComposotions)
+    {
+        <tr>
+            <td>@mealscomposition.Meal?.Name</td>
+            <td>@mealscomposition.Product?.Name</td>
+            <td>@mealscomposition.ProductWeight</td>
+            <td>
+                <form method="post">
+                    <a asp-page="Edit" asp-route-id="@mealscomposition.Id" class="s11">Изменить</a>
+                    <button type="submit" asp-page-handler="delete" asp-route-id="@mealscomposition.Id" class="gradient-button">
+                        Удалить
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+    }
+</table>

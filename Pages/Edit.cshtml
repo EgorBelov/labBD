@@ -1,7 +1,6 @@
 ﻿@page
 @model labBD.Pages.EditModel
-@{
-}
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Редактирование пользоавтеля</h2>
 
 <form method="post">
@@ -34,5 +33,5 @@
         <label>Физическая активность</label><br />
         <input name="physicalActivity" value="@Model.User?.PhysicalActivity" type="number" />
     </p>
-    <input type="submit" value="Сохранить" />
+    <input type="submit" value="Сохранить" class="gradient-button" />
 </form>

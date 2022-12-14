@@ -1,0 +1,21 @@
+﻿@page
+@model labBD.Pages.MealsCompositions.EditModel
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
+<h2>Редактирование состав блюда</h2>
+
+<form method="post">
+    <input name="id" value="@Model.MealsComposition?.Id" type="hidden" />
+    <p>
+        <label>Блюдо</label><br />
+        <input name="name" value="@Model.MealsComposition?.Meal?.Name" />
+    </p>
+    <p>
+        <label>Продукт</label><br />
+        <input name="email" value="@Model.MealsComposition?.Product?.Name" />
+    </p>
+    <p>
+        <label>Масса продукта</label><br />
+        <input name="height" value="@Model.MealsComposition?.ProductWeight" type="number" />
+    </p>
+    <input type="submit" value="Сохранить" class="gradient-button" />
+</form>

@@ -1,7 +1,6 @@
 ﻿@page
 @model labBD.Pages.FoodIntakes.EditModel
-@{
-}
+<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 <h2>Редактирование приема пищи</h2>
 
 <form method="post">
@@ -22,5 +21,5 @@
         <label>Пользователь</label><br />
         <input name="userName" value="@Model.FoodIntake?.User?.Name" />
     </p>
-    <input type="submit" value="Сохранить" />
+    <input type="submit" value="Сохранить" class="gradient-button" />
 </form>
